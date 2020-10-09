@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e4cdb"],{"927c":function(n,o,e){"use strict";e.r(o);var c=function(){var n=this,o=n.$createElement,e=n._self._c||o;return e("BookForm")},t=[],a=e("a2c2"),r={name:"AddBook",components:{BookForm:a["a"]}},u=r,l=e("2877"),s=Object(l["a"])(u,c,t,!1,null,null,null);o["default"]=s.exports}}]);
+//# sourceMappingURL=chunk-2d0e4cdb.35450bd6.js.map

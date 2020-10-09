@@ -1,25 +1,63 @@
 <template>
   <div class="add-book">
-    {{ BookId }}
-    <form action="" v-if="BookId">
-      <input type="url" v-model="image" :placeholder="image" required />
-      <input type="text" v-model="title" :placeholder="title" required />
-      <input type="text" v-model="author" :placeholder="author" required />
-      <input type="date" v-model="date" required />
-      <button v-on:click="editBook">Сохранить</button>
-      <button v-on:click="deleteBook">Удалить!</button>
+    <h1 v-if="BookId">Редактирование книги "{{ title }}"</h1>
+    <h1 v-if="!BookId">Добавьте новую книгу</h1>
+    <form action="" v-if="BookId" class="add-book-form">
+      <input
+        type="url"
+        v-model="image"
+        :placeholder="image"
+        required
+        class="add-book-form__input"
+      />
+      <input
+        type="text"
+        v-model="title"
+        :placeholder="title"
+        required
+        class="add-book-form__input"
+      />
+      <input
+        type="text"
+        v-model="author"
+        :placeholder="author"
+        required
+        class="add-book-form__input"
+      />
+      <input type="date" v-model="date" required class="add-book-form__input" />
+      <button v-on:click="editBook" class="add-book-form__button">
+        Сохранить
+      </button>
+      <button v-on:click="deleteBook" class="add-book-form__button">
+        Удалить книгу!
+      </button>
     </form>
-    <form action="" v-if="!BookId">
+    <form action="" v-if="!BookId" class="add-book-form">
       <input
         type="url"
         v-model="image"
         placeholder="Ссылка на обложку"
         required
+        class="add-book-form__input"
       />
-      <input type="text" v-model="title" placeholder="Название" required />
-      <input type="text" v-model="author" placeholder="Автор" required />
-      <input type="date" v-model="date" required />
-      <button v-on:click="saveBook">Сохранить</button>
+      <input
+        type="text"
+        v-model="title"
+        placeholder="Название"
+        required
+        class="add-book-form__input"
+      />
+      <input
+        type="text"
+        v-model="author"
+        placeholder="Автор"
+        required
+        class="add-book-form__input"
+      />
+      <input type="date" v-model="date" required class="add-book-form__input" />
+      <button v-on:click="saveBook" class="add-book-form__button">
+        Сохранить
+      </button>
     </form>
   </div>
 </template>
@@ -108,4 +146,25 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.add-book {
+  padding: 2rem;
+}
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  margin: 3rem auto;
+  background: #c5c5c5;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.add-book-form__button {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.add-book-form__input {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+</style>
