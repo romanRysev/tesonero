@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app">
     <vNavigation />
     <router-view />
   </div>
@@ -17,4 +17,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.app {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>

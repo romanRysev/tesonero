@@ -37,7 +37,6 @@ export default new Vuex.Store({
     },
     getBook: state => id => {
       const bookIndex = state.books.findIndex(item => item.id == id);
-      console.log(bookIndex);
       return { book: state.books[bookIndex], bookIndex };
     }
   }
